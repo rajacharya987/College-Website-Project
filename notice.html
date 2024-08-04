@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Notices and announcements from Sushma Godawari College. Stay updated with the latest information and events.">
+    <meta name="keywords" content="Sushma Godawari College, Notices, Announcements, Updates">
+    <meta name="author" content="Your Name">
+
+    <title>Notices | Sushma Godawari College</title>
+
+    <link rel="stylesheet" href="css/main_style.css">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+</head>
+
+<body>
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="image/logo.png" id="logo-img" alt="Sushma Godawari College Logo"></a>
+
+            <div class="nav-links" id="navLinks">
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Admission_page.html">Admission</a></li>
+                    <li><a href="index.html#course_call">Courses</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="notice.html">Notice</a></li>
+                </ul>
+            </div>
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+
+        <div class="text-box">
+            <h1>Notices</h1>
+            <p>Stay updated with the latest announcements and notices from Sushma Godawari College.</p>
+        </div>
+    </section>
+
+    <!-- Notices Section -->
+    <section class="notices">
+        <h1>Latest Notices</h1>
+        <div class="notice-container">
+
+            <!-- Notice Card 1 -->
+            <div class="notice-card">
+                <img src="image/notice1_thumbnail.jpg" alt="Notice 1" onclick="openModal('image/notice1_thumbnail-.jpg', 'Notice Title 1 - Detailed Information')" class="notice-image">
+                <h3>Notice Regarding Class 11 Orientation Program</h3>
+                <p>Thursday 18th July, 2024</p>
+                <p>Orientation Program Invitation We are thrilled to extend a warm invitation to all Class 11 students interested in pursuing a career in Hotel Management, Science, and Management streams to our upcoming Orientation Program. This program
+                    is designed to provide you with valuable insights into the exciting opportunities and academic pathways available at our Sushma Godawari College.</p>
+            </div>
+
+            <!-- Notice Card 2 -->
+            <div class="notice-card">
+                <img src="image/notice2_thumbnail.jpg" alt="Notice 2" onclick="openModal('image/notice2_thumbnail-.jpg', 'Notice Title 2 - Detailed Information')" class="notice-image">
+                <h3>Notice Regarding +2 Entrance Examination</h3>
+                <p>Tuesday 2nd July, 2024</p>
+                <P>We would like to inform all prospective students that the entrance examination for our +2 programs will be held on Tuesday, 2nd July, 2024. This examination is a crucial step for admission into our diverse range of +2 courses, including
+                    Science, Management, and Humanities. We encourage all eligible candidates to prepare thoroughly and attend the examination on the scheduled date. Detailed instructions and exam schedules will be sent to registered candidates via email.</P>
+            </div>
+
+            <!-- Notice Card 3 -->
+            <div class="notice-card">
+                <img src="image/notice3_thumbnail.jpg" alt="Notice 3" onclick="openModal('image/notice3_thumbnail-.jpg', 'Notice Title 3 - Detailed Information')" class="notice-image">
+                <h3>Notice regarding B.Sc.CSIT Entrance Exam</h3>
+                <p>Tuesday 2nd July, 2024</p>
+                <p>Attention to all applicants interested in the Bachelor of Science in Computer Science and Information Technology (B.Sc. CSIT) program: The entrance exam for this course is scheduled for Tuesday, 2nd July, 2024. This exam is designed to
+                    assess your knowledge and skills relevant to the CSIT program. Please ensure that you review the provided syllabus and guidelines before the exam date. Further details and specific instructions will be provided to registered candidates.
+
+                </p>
+            </div>
+
+            <!-- Add more notice cards as needed -->
+
+        </div>
+    </section>
+
+    <!-- Modal for displaying larger notice -->
+    <div id="modal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption" class="caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-content">
+            <h2>About Us</h2>
+            <p>Sushma Godawari College offers a range of programs designed to provide high-quality education and support student success. Our dedicated faculty and advanced facilities ensure a rewarding academic experience.</p>
+            <p id="copyright">© 2024 Sushma Godawari College | Maintained by: Center for Information Technology</p>
+            <p>Contact: Itahari, Sunsari | 9852055456 | info@godawari.edu.np</p>
+        </div>
+
+        <!-- Map Card -->
+        <div class="map-card">
+            <h3>Find Us Here</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.171604978785!2d87.2748639!3d26.6540805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6c6ffd419ad7%3A0x3c19a0cb1869a764!2sSushma%20Koirala%20Memorial%20College!5e0!3m2!1sen!2sin!4v1692679323396!5m2!1sen!2sin"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="javascript/main_script.js"></script>
+</body>
+
+</html>
