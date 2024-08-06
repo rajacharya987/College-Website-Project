@@ -90,7 +90,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #ff0000;
+    background: #028d2e;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -255,8 +255,8 @@ nav img {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     transition: 0.5s;
 }
 
@@ -270,7 +270,7 @@ nav img {
     font-weight: 500;
     color: #fff;
     font-size: 26px;
-    bottom: 0%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%);
     position: absolute;
@@ -281,6 +281,36 @@ nav img {
 .layer:hover h3 {
     opacity: 1;
     bottom: 49%;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .campus-col {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .campus-col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .campus {
+        width: 95%;
+        padding-top: 30px;
+    }
+    .campus-col {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+    .layer h3 {
+        font-size: 20px;
+    }
 }
 
 
@@ -460,8 +490,19 @@ nav img {
     .text-box p {
         font-size: 0.875rem;
     }
+    .nav-links ul li {
+        display: block;
+    }
     .nav-links {
-        display: none;
+        position: absolute;
+        background: #028d2e;
+        height: 100vh;
+        width: 200px;
+        top: 0%;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
     }
     .icon {
         display: block;
@@ -959,4 +1000,311 @@ footer {
 
 .notice-card p {
     margin: 10px 0;
+}
+
+
+/* test
+
+/* Reset and Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+
+/* Responsive Images */
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+
+/* Header and Navigation */
+
+header,
+nav {
+    padding: 1em;
+    background: #00000000;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Hero Section */
+
+.hero {
+    background: #f4f4f4;
+    padding: 2em;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+
+/* Layout Containers */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/* Flexbox Layouts */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1 1 300px;
+    /* Grow to fit, but not smaller than 300px */
+    margin: 10px;
+}
+
+
+/* Featured Courses Section */
+
+.course {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.course h1 {
+    font-size: 2rem;
+}
+
+.course p {
+    font-size: 1rem;
+}
+
+
+/* Responsive Grid */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-col {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .course-col {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .course-col {
+        flex: 1 1 100%;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 0.875rem;
+    }
+}
+
+
+/* Footer Styles */
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2em;
+    text-align: center;
+}
+
+.footer-content h2 {
+    font-size: 1.5rem;
+}
+
+.footer-content p {
+    font-size: 1rem;
+}
+
+
+/* Modal Styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Responsive adjustments for Modals */
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+    }
+    .close {
+        font-size: 20px;
+    }
+}
+
+
+/* Set background image for the body */
+
+body {
+    background: url('../image/bodybg.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+
+/* CSIT Section */
+
+.csit-section {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.csit-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.csit-section p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.csit-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    text-align: center;
+    width: 300px;
+    /* Adjust width as needed */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.csit-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.csit-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.csit-card p {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.csit-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .csit-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .csit-card {
+        width: 100%;
+    }
 }
